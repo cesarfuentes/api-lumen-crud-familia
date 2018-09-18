@@ -91,7 +91,10 @@ class UsersController extends Controller
    }
 
    
-
+   public function showUsers(){
+           $user = Users::all();   
+           return response()->json($user);
+   }
  
 }    
  

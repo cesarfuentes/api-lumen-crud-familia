@@ -23,5 +23,7 @@ $router->get('todo/{id}/', 'TodoController@show');
 $router->put('todo/{id}/', 'TodoController@update');
 $router->delete('todo/{id}/', 'TodoController@destroy');
 
+$router->get('users/', 'UsersController@showUsers');
+
 
 $router->get('logout/', 'AutentificacionController@logout');

@@ -1,2 +1,55 @@
+//para hacer correr en consola
 php -S localhost:8000 -t public
+
+Headers
+
+Authorization  = bGx6YWdpbGkyekk3VHl1WjlHVjB4aGxtSVFBSmJEMW9hWEl3OEdpTw==
+
+Authorization = api_key
+
+
+api_key = bGx6YWdpbGkyekk3VHl1WjlHVjB4aGxtSVFBSmJEMW9hWEl3OEdpTw==
+
+api_key = Se genera cuando te logueas tienes q copiar el api_key y guardar o pasarse como parametros en todas tus vistas
+
+paramentros
+
+post login
+$router->post('login/','UsersController@authenticate');
+		email
+		password
+
+post register
+$router->post('register/','UsersController@register');
+		username
+		email
+		password
+		userimage
+
+post todo
+$router->post('todo/','TodoController@store');
+		todo
+		description
+		category
+
+get todo
+$router->get('todo/', 'TodoController@index');
+
+mostrar un todo
+ejemplo nombreServidor/todo/1
+$router->get('todo/{id}/', 'TodoController@show');
+
+actualizar un todo
+$router->put('todo/{id}/', 'TodoController@update');
+
+eliminar un todo
+$router->delete('todo/{id}/', 'TodoController@destroy');
+
+listar los usuario
+$router->get('users/', 'UsersController@showUsers');
+
+salir
+$router->get('logout/', 'AutentificacionController@logout');
+
+
 
