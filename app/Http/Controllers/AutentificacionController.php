@@ -21,7 +21,7 @@ class AutentificacionController extends Controller
     public function logout(Request $request)
     {
 
-        //dd($request->header('Authorization'));
+        dd($request->header('Authorization'));
        
         if ($request->header('Authorization')) {
           $key = explode(' ',$request->header('Authorization'));
